@@ -174,16 +174,37 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.home .content-section .text-content {
+@media (max-width: 500px) {
+  .home .content-section .container {
+    margin: 1% 8%;
+  }
+}
+.home .text-content {
   width: 48%;
   padding-right: 1%;
 }
-.home .content-section .img-content {
+@media (max-width: 500px) {
+  .home .text-content {
+    width: 100%;
+    padding: 0;
+  }
+}
+.home .img-content {
   width: 48%;
   padding-left: 1%;
 }
-.home .content-section .img-content img {
+.home .img-content img {
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .img-content {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+  }
 }
 .home .inverse-content {
   padding-bottom: 30px;
@@ -193,28 +214,33 @@ img {
   padding-left: 1%;
   padding-right: 0;
 }
-.home .inverse-content .img-content {
+@media (max-width: 500px) {
+  .home .inverse-content .text-content {
+    padding: 0;
+  }
+}
+.home .img-content {
   padding-right: 1%;
   padding-left: 0;
 }
-.home .content-destination {
+.content-destination {
   width: 75%;
   margin: 0 auto 30px;
 }
-.home .content-destination img {
+.content-destination img {
   border-radius: 10px;
 }
-.home .content-pick {
+.content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
   display: flex;
   justify-content: space-between;
 }
-.home .content-pick .destination {
+.content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
 }
-.home .btn {
+.btn {
   background-color: #077a71;
   width: 190px;
   height: 30px;
@@ -227,16 +253,17 @@ img {
   display: flex;
   justify-content: center;
 }
-.home .btn:hover {
+.btn:hover {
   background-color: #abdbb3;
   color: #077a71;
 }
 @media (max-width: 500px) {
-  .home .btn {
+  .btn {
+    margin-top: 3%;
     width: 100%;
   }
 }
-.home .btn:hover {
+.btn:hover {
   background-color: #212529;
 }
 header {
@@ -264,6 +291,13 @@ nav {
   justify-content: space-around;
   align-items: center;
   margin-left: 400px;
+}
+@media (max-width: 500px) {
+  .links {
+    width: 100%;
+    margin-top: 2%;
+    text-align: center;
+  }
 }
 .footer {
   width: 100%;
